@@ -23,6 +23,7 @@
 /config/credentials.yml.enc
 
 # intellij
+*.iml
 .idea/
 .generators
 .rakeTasks
