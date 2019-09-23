@@ -1,0 +1,11 @@
+<div class="d-flex flex-row col-md-12 h-100 p-0">
+  <div class="status-bar bg-danger" *ngIf="statusBarPosition === statusBarPositions.LEFT">
+    <app-statusbar></app-statusbar>
+  </div>
+  <div class="w-100 bg-dark">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="status-bar bg-danger" *ngIf="statusBarPosition === statusBarPositions.RIGHT">
+    <app-statusbar></app-statusbar>
+  </div>
+</div>
