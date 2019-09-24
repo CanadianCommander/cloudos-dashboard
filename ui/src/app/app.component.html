@@ -1,11 +1,8 @@
-<div class="d-flex flex-row col-md-12 h-100 p-0">
-  <div class="status-bar bg-danger" *ngIf="statusBarPosition === statusBarPositions.LEFT">
+<mat-sidenav-container class="page-container d-flex flex-row col-md-12 h-100 p-0">
+  <mat-sidenav class="status-bar h-100" [mode]="'side'" [opened]="'opened'">
     <app-statusbar></app-statusbar>
-  </div>
-  <div class="w-100 bg-dark">
+  </mat-sidenav>
+  <mat-sidenav-content class="h-100 w-100 bg-transparent">
     <router-outlet></router-outlet>
-  </div>
-  <div class="status-bar bg-danger" *ngIf="statusBarPosition === statusBarPositions.RIGHT">
-    <app-statusbar></app-statusbar>
-  </div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
