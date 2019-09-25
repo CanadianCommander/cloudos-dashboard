@@ -1,8 +1,13 @@
-<mat-sidenav-container class="page-container d-flex flex-row col-md-12 h-100 p-0">
-  <mat-sidenav class="status-bar h-100" [mode]="'side'" [opened]="'opened'">
+<mat-sidenav-container tabindex="1" class="page-container d-flex flex-row col-md-12 h-100 p-0"
+                       (keydown)="handleKeyDown($event)">
+  <mat-sidenav #sidenav class="status-bar h-100" [mode]="'side'" [opened]="'opened'">
     <app-statusbar></app-statusbar>
   </mat-sidenav>
-  <mat-sidenav-content class="h-100 w-100 bg-transparent">
+  <mat-sidenav-content class="d-flex flex-row h-100 w-100 bg-transparent">
+    <div class="sidenav-gutter d-flex align-items-center">
+      <mat-icon class="icon-primary icon-md sidenav-icon" [svgIcon]="'arrow_right'" [inline]="true"
+      (click)="sideNav.toggle()"></mat-icon>
+    </div>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

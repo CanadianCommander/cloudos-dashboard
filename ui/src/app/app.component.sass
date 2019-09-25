@@ -9,3 +9,19 @@
 .page-container
   background-image: url("../assets/place_holder_bg.jpg")
   background-size: cover
+
+.sidenav-gutter
+  width: 40px
+  display: inline-block
+
+.sidenav-icon
+  &:hover
+    cursor: pointer
+    @keyframes sidenav-nudge
+      0%
+        transform: translateX(0px)
+      50%
+        transform: translateX(-4px)
+      100%
+        transform: translateX(0px)
+    animation: 1.5s linear 0s infinite sidenav-nudge
