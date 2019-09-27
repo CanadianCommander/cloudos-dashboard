@@ -26,10 +26,10 @@ module RestService
 		begin
 			file = File.open(img_path)
 			return file.read
-		rescue IOError => e
-			return error_response(e.to_s)
 		ensure
-			file.close
+			unless file.nil?
+				file.close
+			end
 		end
 	end
 end

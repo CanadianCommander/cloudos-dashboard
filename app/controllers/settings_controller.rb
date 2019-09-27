@@ -4,9 +4,13 @@ class SettingsController < ApplicationController
 
   # return the wallpaper
   def get_wallpaper
-    data = img_response(SettingsService::WALLPAPER_PATH)
-    type = MimeMagic.by_magic(data)
-    send_data(data, type: type)
+    begin
+      data = img_response(SettingsService::WALLPAPER_PATH)
+      type = MimeMagic.by_magic(data)
+      send_data(data, type: type)
+    rescue Exception => e
+      render json: error_response(e.to_s), status: 500
+    end
   end
 
   # set the wallpaper
