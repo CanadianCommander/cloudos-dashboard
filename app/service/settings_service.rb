@@ -1,6 +1,6 @@
 class SettingsService
 
-	BASE_PATH = '/var/cloudos-dashboard/'.freeze
+	BASE_PATH = '/cloudos/var/cloudos_dashboard/'.freeze
 	WALLPAPER_PATH = BASE_PATH + "wallpaper.img".freeze
 
 end
