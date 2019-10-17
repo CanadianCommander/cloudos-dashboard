@@ -45,4 +45,7 @@ Rails.application.configure do
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
+
+  # whether or not to verify ssl on requests made to cloudos api
+  config.verify_ssl = false
 end

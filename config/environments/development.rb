@@ -49,4 +49,7 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+	# whether or not to verify ssl on requests made to cloudos api
+	config.verify_ssl = false
 end

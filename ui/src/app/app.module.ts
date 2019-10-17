@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppGridComponent } from './app-grid/app-grid.component';
+import { AppGridComponent } from './views/app-grid/app-grid.component';
 import {AppStatusbarComponent} from './statusbar/app-statusbar.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatIconModule, MatSidenavModule} from "@angular/material";
