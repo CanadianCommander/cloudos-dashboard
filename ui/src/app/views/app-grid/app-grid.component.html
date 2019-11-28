@@ -1,5 +1,9 @@
-<div class="app-grid">
+<div class="app-grid d-flex flex-row mt-3 mb-3">
   <div *ngFor="let program of programs">
-    <p>{{program.displayName}}</p>
+    <app-icon [card-text]="program.displayName"
+                   [card-icon]="program.iconUrl != null ? program.iconUrl : 'app_default_icon'"
+                   [card-size]="'card-lg'"
+                   (onClick)="appClicked(program)"
+    ></app-icon>
   </div>
 </div>

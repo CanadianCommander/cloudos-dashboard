@@ -8,12 +8,14 @@ import {AppStatusbarComponent} from './statusbar/app-statusbar.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatIconModule, MatSidenavModule} from "@angular/material";
 import {HttpClientModule} from "@angular/common/http";
+import { AppIconComponent } from './common/app-icon/app-icon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppGridComponent,
-    AppStatusbarComponent
+    AppStatusbarComponent,
+    AppIconComponent
   ],
   imports: [
     BrowserModule,

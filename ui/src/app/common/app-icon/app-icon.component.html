@@ -1,0 +1,9 @@
+<div class="icon-card"
+     [ngClass]="cardSizeClass"
+     (click)="onClick()">
+  <div class="d-flex flex-row flex-wrap justify-content-center" [ngClass]="{'clickable': clickedEvent.observers.length > 0}">
+    <mat-icon class="icon-primary flex-fill-row" [svgIcon]="iconName" [inline]="true"></mat-icon>
+    <p class="flex-fill-row text-center text-primary-inv">{{ cardText }}</p>
+  </div>
+</div>
+
